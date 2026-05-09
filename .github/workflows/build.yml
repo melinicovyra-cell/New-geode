@@ -9,10 +9,17 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v4
+      - name: Checkout
+        uses: actions/checkout@v4
 
-      - name: Build placeholder
-        run: |
-          echo "Building Geode mod..."
-          ls -la
-          echo "Done"
+      - name: Setup and build Geode mod
+        uses: geode-sdk/build-geode-mod@main
+        with:
+          target: pc
+
+      - name: Upload artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: geode-mod
+          path: build/**/*.geode
+          if-no-files-found: warn
