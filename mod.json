@@ -1,11 +1,11 @@
 {
-  "geode": "v5.6.1",
+  "geode": "5.6.1",
   "gd": {
     "win": "2.206",
     "android": "2.206"
   },
   "id": "new.geode.mod",
   "name": "New Geode Mod",
-  "version": "v1.0.0",
+  "version": "1.0.0",
   "developer": "auto"
 }
